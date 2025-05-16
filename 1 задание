@@ -1,0 +1,21 @@
+#1
+#Первыми двумя строками импортируем библиотеку NumPy и модуль Pyplot 
+import numpy as np
+import matplotlib.pyplot as plt #для визуализации
+
+x=np.linspace(0, 10, 100) #создаем массив из 100 точек от 0 до 10
+
+y=np.sin(x) #вычисляем синус от каждого значения х
+z=np.cos(x) #вычисляем косинус от каждого значения х
+
+plt.figure(figsize=(10,5)) #размер
+
+plt.plot(x,y,label='sin(x)',color='violet') #строим график синуса с меткой и цветом
+plt.plot(x,z,label='cos(x)',color='grey')
+
+plt.xlabel('x') #подпись оси Х
+plt.ylabel('y,z') #подпись Y
+plt.title('Графики sin(x) и cos(x)') #установка заголовка
+
+plt.legend() #показывает какая линия какой функции соответствует
+plt.show() #выводим график
