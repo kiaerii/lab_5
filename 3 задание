@@ -11,10 +11,8 @@ print(mat)
 #создаю график
 plt.imshow(mat, cmap="coolwarm", interpolation="nearest") #imshow - матрица как изображение, cmap — цветовая схема, interpolation="nearest" - пиксели без сглаживания
 plt.colorbar() #цвета
-# задаём заголовок графика
-plt.title("Тепловая карта")
-# показываем график
-plt.show()
+plt.title("Тепловая карта") #задаем заголовок графика
+plt.show() #показываем график
 
 #находим среднее значение
 sr=np.mean(mat)
@@ -28,4 +26,4 @@ print('3. Минимальный элемент:', mini)
 
 #находим сумму по столбцам
 stsu=np.sum(mat, axis=0)
-print('\n4. Сумма по столбцам:', column_sums)
+print('\n4. Сумма по столбцам:', stsu)
