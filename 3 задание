@@ -8,7 +8,7 @@ mat=np.random.randint(1, 11, size=(5,5))
 print('исходная матрица')
 print(mat)
 
-
+#создаю график
 plt.imshow(mat, cmap="coolwarm", interpolation="nearest") #imshow - матрица как изображение, cmap — цветовая схема, interpolation="nearest" - пиксели без сглаживания
 plt.colorbar() #цвета
 # задаём заголовок графика
