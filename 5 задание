@@ -1,0 +1,35 @@
+#Первыми двумя строками импортируем библиотеку NumPy и модуль Pyplot 
+import numpy as np
+import matplotlib.pyplot as plt #для визуализации
+
+#создаем фигуру с 3 областями (1 строка, 3 столбца)
+fig,(ax1, ax2, ax3)=plt.subplots(1, 3, figsize=(15, 5)) #размер фигуры
+#3 оси          #3 графика в 1 стр и 3 столб
+#1.Линейный график y = x^2
+x=np.linspace(-5, 5, 100)
+y=x**2
+ax1.plot(x, y)
+
+ax1.set_title('y = x²') #заголовок
+ax1.set_xlabel('x') #подпись оси Х
+ax1.set_ylabel('y') #подпись оси Y
+
+#2.Точечный график случайных точек
+np.random.seed(42)  #фиксирует случ. числа для воспроизводимости
+x=np.random.rand(50) #50 случ.чисел от 0 до 1
+y=np.random.rand(50)
+ax2.scatter(x, y, color='pink') #рисует точечный график
+
+ax2.set_title('Случайные точки')
+ax2.set_xlabel('X')
+ax2.set_ylabel('Y')
+
+#3.Столбчатая диаграмма
+categories=['A', 'B', 'C']
+values=[3, 7, 2] #высота
+ax3.bar(categories, values, color=['violet', 'blue', 'green'])
+ax3.set_title('Категории')
+ax3.set_ylabel('Значения')
+
+plt.tight_layout() #расстояние между графиками
+plt.show() #показать график
