@@ -18,7 +18,7 @@ ax1.set_ylabel('y') #подпись оси Y
 np.random.seed(42)  #фиксирует случ. числа для воспроизводимости
 x=np.random.rand(50) #50 случ.чисел от 0 до 1
 y=np.random.rand(50)
-ax2.scatter(x, y, color='pink') #рисует точечный график
+ax2.scatter(x, y, color='violet') #рисует точечный график
 
 ax2.set_title('Случайные точки')
 ax2.set_xlabel('X')
@@ -27,7 +27,7 @@ ax2.set_ylabel('Y')
 #3.Столбчатая диаграмма
 categories=['A', 'B', 'C']
 values=[3, 7, 2] #высота
-ax3.bar(categories, values, color=['violet', 'blue', 'green'])
+ax3.bar(categories, values, color=['pink', 'grey', 'green'])
 ax3.set_title('Категории')
 ax3.set_ylabel('Значения')
 
