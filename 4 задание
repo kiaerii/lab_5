@@ -1,3 +1,4 @@
+#Первыми двумя строками импортируем библиотеку NumPy и модуль Pyplot 
 import numpy as np
 import matplotlib.pyplot as plt #для визуализации
 
