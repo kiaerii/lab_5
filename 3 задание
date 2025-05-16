@@ -17,15 +17,15 @@ plt.title("Тепловая карта")
 plt.show()
 
 #находим среднее значение
-mean_value=np.mean(mat)
+sr=np.mean(mat)
 print('\n1. Среднее значение:', mean_value)
 
 #находим максимальный и минимальный элементы
-max_value=np.max(mat)
-min_value=np.min(mat)
-print('2. Максимальный элемент:', max_value)
-print('3. Минимальный элемент:', min_value)
+maxi=np.max(mat)
+mini=np.min(mat)
+print('2. Максимальный элемент:', maxi)
+print('3. Минимальный элемент:', mini)
 
 #находим сумму по столбцам
-column_sums=np.sum(mat, axis=0)
+stsu=np.sum(mat, axis=0)
 print('\n4. Сумма по столбцам:', column_sums)
