@@ -1,1 +1,31 @@
+#Первыми двумя строками импортируем библиотеку NumPy и модуль Pyplot 
+import numpy as np
+import matplotlib.pyplot as plt #для визуализации
 
+#создаем матрицу 5×5 с случ. числами от 1 до 10
+mat=np.random.randint(1, 11, size=(5,5))
+
+print('исходная матрица')
+print(mat)
+
+
+plt.imshow(mat, cmap="coolwarm", interpolation="nearest") #imshow - матрица как изображение, cmap — цветовая схема, interpolation="nearest" - пиксели без сглаживания
+plt.colorbar() #цвета
+# задаём заголовок графика
+plt.title("Тепловая карта")
+# показываем график
+plt.show()
+
+#находим среднее значение
+mean_value=np.mean(mat)
+print('\n1. Среднее значение:', mean_value)
+
+#находим максимальный и минимальный элементы
+max_value=np.max(mat)
+min_value=np.min(mat)
+print('2. Максимальный элемент:', max_value)
+print('3. Минимальный элемент:', min_value)
+
+#находим сумму по столбцам
+column_sums=np.sum(mat, axis=0)
+print('\n4. Сумма по столбцам:', column_sums)
