@@ -1,0 +1,38 @@
+import numpy as np
+import matplotlib.pyplot as plt #для визуализации
+
+#создаем матрицу 5×5 с случ. числами от 1 до 10
+mat=np.random.randint(1, 11, size=(5,5))
+
+print('исходная матрица')
+print(mat)
+
+
+plt.imshow(mat, cmap='viridis') #imshow - матрица как изображение, cmap — цветовая схема
+plt.colorbar() #цвета
+plt.title('Тепловая карта') #задаем заголовок графика
+#добавляем числа в ячейки
+for i in range(5):
+    for j in range(5):
+        if mat[i,j] > 5:
+            plt.text(j, i, mat[i,j], ha='center', va='center', color='white')
+        else: 'black'
+
+plt.show() # показываем график
+
+___________________________
+
+#импортируем библиотеку Seaborn
+import seaborn as sns
+#Первыми двумя строками импортируем библиотеку NumPy и модуль Pyplot 
+import numpy as np
+import matplotlib.pyplot as plt #для визуализации
+
+#создаем матрицу 5×5 с случ. числами от 1 до 10
+mat=np.random.randint(1, 11, size=(5,5))
+
+#создаём тепловую карту с числами внутри ячеек
+sns.heatmap(mat, annot=True, cmap='greys') #числа в каждой, 
+plt.title('Тепловая карта с Seaborn') #заголовок графика
+plt.show() # показываем график
+
