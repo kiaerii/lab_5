@@ -1,6 +1,6 @@
 #1
 #Первыми двумя строками импортируем библиотеку NumPy и модуль Pyplot 
-import numpy as np
+import numpy as np #для работы с массивами и мат. операциями
 import matplotlib.pyplot as plt #для визуализации
 
 x=np.linspace(0, 10, 100) #создаем массив из 100 точек от 0 до 10
