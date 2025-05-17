@@ -9,7 +9,7 @@ print('исходная матрица')
 print(mat)
 
 
-plt.imshow(mat, cmap='viridis') #imshow - матрица как изображение, cmap — цветовая схема
+plt.imshow(mat, cmap='YlGnBu') #imshow - матрица как изображение, cmap — цветовая схема
 plt.colorbar() #цвета
 plt.title('Тепловая карта') #задаем заголовок графика
 #добавляем числа в ячейки
