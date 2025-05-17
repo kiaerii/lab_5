@@ -1,5 +1,5 @@
 #Первыми двумя строками импортируем библиотеку NumPy и модуль Pyplot 
-import numpy as np
+import numpy as np #для работы с массивами и мат. операциями
 import matplotlib.pyplot as plt #для визуализации
 
 #создаем матрицу 5×5 с случ. числами от 1 до 10
